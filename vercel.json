@@ -2,14 +2,20 @@
     "version": 2,
     "builds": [
       {
-        "src": "./bin/server.js", 
+        "src": "/bin/server.js", 
         "use": "@vercel/node"
       }
     ],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "./bin/server.js"
+        "dest": "/bin/server.js"
       }
+    ],
+    "rewrites": [
+        {
+             "source": "/(.*)", 
+             "destination": "/bin/server.js" 
+        }
     ]
   }
