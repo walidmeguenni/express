@@ -3,7 +3,7 @@
   "description": "build an express app",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon ./bin/server.js"
+    "start": "node ./bin/server.js"
   },
   "dependencies": {
     "bcrypt": "^5.1.0",
