@@ -38,6 +38,10 @@ app.use("/product", productRouter);
 app.use("/employee", employeeRouter);
 app.use("/user", userRouter);
 
+app.get('/', (req, res) => {
+  res.status(200).json('Welcome, your app is working well');
+})
+
 //-----------------------------Handling errors---------------------//
 app.use((req, res, next) => {
   const error = new Error(`error 404 rout not found`);
